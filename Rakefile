@@ -16,3 +16,8 @@ namespace :db do
     Student.create_table
   end
 end
+
+desc 'access files'
+task :environment do
+  require_relative './config/environment'
+end
