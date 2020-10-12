@@ -15,19 +15,19 @@ namespace :db do
   task :migrate => :environment do
     Student.create_table
   end
-end
 
-desc 'access files'
-task :environment do
-  require_relative './config/environment'
-end
+  desc 'access files'
+  task :environment do
+    require_relative './config/environment'
+  end
 
-desc 'seed the database with some dummy data'
-task :seed do
-  require_relative './db/seeds.rb'
-end
+  desc 'seed the database with some dummy data'
+  task :seed do
+    require_relative './db/seeds.rb'
+  end
 
-desc 'drop into the Pry console'
-task :console => :environment do
-  Pry.start
-end 
+  desc 'drop into the Pry console'
+  task :console => :environment do
+    Pry.start
+  end
+end
